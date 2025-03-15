@@ -1,0 +1,602 @@
+:root {
+  --primary: #800020;
+  --secondary: #2e1a17;
+  --accent: #c7a003;
+  --light: #f8f5f0;
+  --dark: #1a0f0d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: var(--light);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header & Navigation */
+header {
+  background-color: rgba(46, 26, 23, 0.95);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--light);
+}
+
+.logo span {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--light);
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.nav-icons a {
+  color: var(--light);
+  margin-left: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://img.freepik.com/free-photo/front-view-tasty-fruit-plate-grapes-with-wine-bottle-cheese-fruits-glass-dark-background_155003-32343.jpg?uid=R125581149&ga=GA1.1.150794869.1737825014&semt=ais_hybrid');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+  z-index: -1;
+}
+
+.hero .content {
+  padding: 2rem;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #9a0025;
+}
+
+/* Featured Categories */
+.section {
+  padding: 5rem 0;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--secondary);
+}
+
+.featured-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.category {
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.category:hover {
+  transform: translateY(-5px);
+}
+
+.category img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.category h3 {
+  padding: 1rem 0;
+  color: var(--secondary);
+}
+
+.btn-shop {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  padding: 8px 20px;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn-shop:hover {
+  background-color: #9a0025;
+}
+
+/* Products Section */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--accent);
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-details {
+  padding: 1rem;
+}
+
+.product-name {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.product-category {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 0.5rem;
+}
+
+.add-to-cart {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: var(--primary);
+}
+
+/* Wine Club Section */
+.membership-plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.plan {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+  border: 1px solid #eee;
+}
+
+.plan.featured {
+  border: 2px solid var(--accent);
+  transform: scale(1.05);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background-color: var(--accent);
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+.plan h3 {
+  color: var(--secondary);
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 1rem 0;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #666;
+}
+
+.features {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.btn-subscribe {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-subscribe:hover {
+  background-color: #9a0025;
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary);
+  color: var(--light);
+  padding: 3rem 0;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.footer-column h3 {
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: var(--light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: var(--light);
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--accent);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.9rem;
+}
+
+/* Mobile Menu Active State */
+.nav-active {
+  transform: translateX(0%);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+      position: absolute;
+      right: 0;
+      height: 92vh;
+      top: 8vh;
+      background-color: var(--secondary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+      z-index: 1;
+  }
+  
+  .nav-links li {
+      opacity: 0;
+      margin: 1.5rem 0;
+  }
+  
+  .nav-icons {
+      display: none;
+  }
+  
+  .burger {
+      display: block;
+  }
+  
+  .hero h1 {
+      font-size: 2.5rem;
+  }
+  
+  .hero p {
+      font-size: 1rem;
+  }
+  
+  .plan.featured {
+      transform: none;
+  }
+  
+  .section h2 {
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+      font-size: 2rem;
+  }
+  
+  .section {
+      padding: 3rem 0;
+  }
+  
+  .featured-categories {
+      grid-template-columns: 1fr;
+  }
+  
+  .product-grid {
+      grid-template-columns: 1fr;
+  }
+  
+  .membership-plans {
+      grid-template-columns: 1fr;
+  }
+}
+/* Parallax Backgrounds */
+.parallax-section {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin: 3rem 0;
+  overflow: hidden;
+}
+
+.parallax-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 800px;
+  z-index: 2;
+}
+
+.parallax-content h2 {
+  color: white;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.parallax-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+
+/* Fix for mobile devices */
+@media (max-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll;
+    height: 50vh;
+  }
+  
+  .parallax-content h2 {
+    font-size: 2rem;
+  }
+}
+
+* Parallax Backgrounds */
+.parallax-section {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin: 3rem 0;
+  overflow: hidden;
+}
+
+.parallax-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 800px;
+  z-index: 2;
+}
+
+.parallax-content h2 {
+  color: white;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.parallax-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.parallax-vineyard {
+  background-image: url('https://images.pexels.com/photos/5363578/pexels-photo-5363578.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load');
+}
+
+.parallax-cellar {
+  background-image: url('https://images.pexels.com/photos/31148766/pexels-photo-31148766/free-photo-of-festive-party-setup-with-champagne-and-shots.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.parallax-tasting {
+  background-image: url('https://images.pexels.com/photos/30935966/pexels-photo-30935966/free-photo-of-close-up-of-georgian-wine-flight-in-restaurant.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+/* Fix for mobile devices */
+@media (max-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll;
+    height: 50vh;
+  }
+  
+  .parallax-content h2 {
+    font-size: 2rem;
+  }
+}
