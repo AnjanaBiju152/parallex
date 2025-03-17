@@ -31,7 +31,7 @@ h1, h2, h3, h4 {
   padding: 0 20px;
 }
 
-/* Header & Navigation */
+
 header {
   background-color: rgba(46, 26, 23, 0.95);
   position: fixed;
@@ -96,7 +96,7 @@ nav {
   transition: all 0.3s ease;
 }
 
-/* Hero Section */
+
 .hero {
   height: 100vh;
   display: flex;
@@ -151,7 +151,7 @@ nav {
   background-color: #9a0025;
 }
 
-/* Featured Categories */
+
 .section {
   padding: 5rem 0;
 }
@@ -207,7 +207,7 @@ nav {
   background-color: #9a0025;
 }
 
-/* Products Section */
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -285,7 +285,7 @@ nav {
   background-color: var(--primary);
 }
 
-/* Wine Club Section */
+
 .membership-plans {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -359,7 +359,7 @@ nav {
   background-color: #9a0025;
 }
 
-/* Footer */
+
 footer {
   background-color: var(--secondary);
   color: var(--light);
@@ -419,12 +419,12 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Mobile Menu Active State */
+
 .nav-active {
   transform: translateX(0%);
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
   .nav-links {
       position: absolute;
@@ -492,7 +492,7 @@ footer {
       grid-template-columns: 1fr;
   }
 }
-/* Parallax Backgrounds */
+
 .parallax-section {
   position: relative;
   background-attachment: fixed;
@@ -529,7 +529,7 @@ footer {
 }
 
 
-/* Fix for mobile devices */
+
 @media (max-width: 768px) {
   .parallax-section {
     background-attachment: scroll;
@@ -589,7 +589,7 @@ footer {
   background-image: url('https://images.pexels.com/photos/30935966/pexels-photo-30935966/free-photo-of-close-up-of-georgian-wine-flight-in-restaurant.jpeg?auto=compress&cs=tinysrgb&w=600');
 }
 
-/* Fix for mobile devices */
+
 @media (max-width: 768px) {
   .parallax-section {
     background-attachment: scroll;
